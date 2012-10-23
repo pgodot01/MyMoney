@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
+    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/mymoney</property>
+    <property name="hibernate.connection.username">moa</property>
+    <property name="hibernate.connection.password">toto4toto</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</property>
+    <mapping resource="moa/mymoney/hmapping/Operation.hbm.xml"/>
+    <mapping resource="moa/mymoney/hmapping/Compte.hbm.xml"/>
+    <mapping resource="moa/mymoney/hmapping/Category.hbm.xml"/>
+    <mapping resource="moa/mymoney/hmapping/Banque.hbm.xml"/>
+    <mapping resource="moa/mymoney/hmapping/Subcategory.hbm.xml"/>
+    <mapping resource="moa/mymoney/hmapping/Tiers.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

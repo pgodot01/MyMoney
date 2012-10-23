@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22 oct. 2012 15:42:07 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="moa.mymoney.hmapping.Operation" table="OPERATION" schema="MOA">
+        <id name="id" type="int">
+            <column name="ID" precision="5" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="type" type="int">
+            <column name="TYPE" precision="5" scale="0" not-null="true" />
+        </property>
+        <property name="tiers" type="int">
+            <column name="TIERS" precision="5" scale="0" not-null="true" />
+        </property>
+        <property name="date" type="timestamp">
+            <column name="DATE" length="29" not-null="true" />
+        </property>
+        <property name="category" type="int">
+            <column name="CATEGORY" precision="5" scale="0" not-null="true" />
+        </property>
+        <property name="subcategory" type="java.lang.Integer">
+            <column name="SUBCATEGORY" precision="5" scale="0" />
+        </property>
+        <property name="debit" type="int">
+            <column name="DEBIT" precision="5" scale="0" not-null="true" />
+        </property>
+        <property name="credit" type="int">
+            <column name="CREDIT" precision="5" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
