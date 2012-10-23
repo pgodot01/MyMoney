@@ -130,7 +130,9 @@ public class MyMoney extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
+    /*
+     * Inner class to manage top button
+     */
     class ButtonHandler implements EventHandler<ActionEvent> {
 
         @Override
@@ -141,7 +143,6 @@ public class MyMoney extends Application {
             switch (type) {
                 case BANQUE :
                 case CATEGORY : {
-                    System.out.println("Hello tutu");
                     VBox vbbank = addVBox(type);
                     root.setLeft(vbbank);
                     break;
