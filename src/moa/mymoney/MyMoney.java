@@ -28,8 +28,9 @@ import moa.mymoney.hmapping.MyMoneyHelper;
  * @author IronMan
  */
 public class MyMoney extends Application {
-
+    // Hibernate helper class
     private MyMoneyHelper mmHelper = new MyMoneyHelper();
+    // Main FX object 
     BorderPane root = new BorderPane();
     // Different object category type
     protected enum MMType {
@@ -63,7 +64,7 @@ public class MyMoney extends Application {
 
         Scene scene = new Scene(root, 300, 250);
 
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle("MyMoney");
         primaryStage.setScene(scene);
         primaryStage.show();
 
