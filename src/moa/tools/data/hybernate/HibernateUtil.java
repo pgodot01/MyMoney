@@ -4,6 +4,7 @@
  */
 package moa.tools.data.hybernate;
 
+import org.hibernate.Session;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.SessionFactory;
 
@@ -32,4 +33,7 @@ public class HibernateUtil {
     public static SessionFactory getSessionFactory() {
         return sessionFactory;
     }
+    public static  Session openSession() {
+          return sessionFactory.openSession();
+     }
 }
